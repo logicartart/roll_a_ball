@@ -40,9 +40,12 @@ public class PlayerController : MonoBehaviour
     {
  // Create a 3D movement vector using the X and Y inputs.
         Vector3 movement = new Vector3 (movementX, 0.0f, movementY);
+      //   Vector3 movement = new Vector3 (10, 0.0f, 10);
 
  // Apply force to the Rigidbody to move the player.
         rb.AddForce(movement * speed); 
-        Debug.Log("<color=green>FixedUpdate 成功被系统调用了！</color>"+" "+movementX+" "+movementY);
+      //   Debug.Log("<color=green>FixedUpdate 成功被系统调用了！</color>"+" "+movementX+" "+movementY);
+         // Debug.Log("<color=green>FixedUpdate 成功被系统调用了！</color>"+" "+movement+" "+speed);
+         // rb.AddForce(new Vector3 (10, 0.0f, 10)); 
     }
 }
