@@ -48,4 +48,10 @@ public class PlayerController : MonoBehaviour
          // Debug.Log("<color=green>FixedUpdate 成功被系统调用了！</color>"+" "+movement+" "+speed);
          // rb.AddForce(new Vector3 (10, 0.0f, 10)); 
     }
+
+    void OnTriggerEnter(Collider other){
+         if(other.gameObject.CompareTag("PickUp")){
+            other.gameObject.SetActive(false);
+         }
+    }
 }
